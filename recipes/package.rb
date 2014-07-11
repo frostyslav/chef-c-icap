@@ -23,4 +23,5 @@ raise "Package install only available for Debian/Ubuntu systems" if not platform
 %w{c-icap libc-icap-mod-clamav libc-icap-mod-squidclamav libc-icap-mod-urlcheck}.each do |pkg|
   package pkg do
     action :install
+  end
 end
