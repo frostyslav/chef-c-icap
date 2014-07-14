@@ -18,6 +18,8 @@
 # limitations under the License.
 #
 
+include_recipe "checkinstall::default"
+
 remote_file "#{Chef::Config['file_cache_path']}/c_icap-#{node['c_icap']['version']}.tar.gz" do
   source   "#{node['c_icap']['url']}/c_icap-#{node['c_icap']['version']}.tar.gz"
   checksum node['c_icap']['checksum']
